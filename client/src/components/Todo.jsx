@@ -20,6 +20,10 @@ const Todo = () => {
         }
     })
 
+    if (Math.random() > 0.5) {
+        return new Error("Test Error Boundary");
+    }
+
     return (
         <div>
             <input onChange={(e) => setTodo(e.target.value)} value={todo} type="text" />
